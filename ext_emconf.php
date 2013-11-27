@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Google Maps API Extbase',
-	'description' => 'Extbase Version of go_maps_ap. Simply instert a google map Version 3, jQuery, MooTools, Calculate Route, Image for Markers, Style Maps, KML,...',
+	'description' => 'Google Maps Extension. Simply instert a google map Version 3, jQuery, Calculate Route, Image for Markers, Style Maps, KML, Categories...',
 	'category' => 'plugin',
 	'author' => 'Marc Hirdes',
 	'author_email' => 'Marc_Hirdes@gmx.de',
