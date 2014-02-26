@@ -43,6 +43,7 @@ class Tx_GoMapsExt_Domain_Repository_AddressRepository extends Tx_Extbase_Persis
 	public function findAllAddresses(Tx_GoMapsExt_Domain_Model_Map $map, $categories, $pid) {
 		$query = $this->createQuery();
 		$query->getQuerySettings()->setRespectStoragePage(FALSE);
+        $query->getQuerySettings()->setRespectSysLanguage(FALSE);
 
 		$or = array();
 		$and = array();

@@ -71,8 +71,12 @@ class Tx_GoMapsExt_Controller_MapController extends Tx_Extbase_MVC_Controller_Ac
 		$this->extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['go_maps_ext']);
 		$googleMapsLibrary = $this->extConf['googleMapsLibrary'] ? 
 			htmlentities($this->extConf['googleMapsLibrary']) : 
-			'http://maps.google.com/maps/api/js?v=3.12&amp;sensor=false';
-		$headerData = '<script type="text/javascript" src="' . $googleMapsLibrary . '"></script>
+			'http://maps.google.com/maps/api/js?v=3.13&amp;sensor=false';
+        if($this->settings['language']) {
+            $googleMapsLibrary .= '&language=' . $this->settings['language'];
+        }
+
+        $headerData = '<script type="text/javascript" src="' . $googleMapsLibrary . '"></script>
 					 	';
 		$this->extConf['openByClick'] = $this->settings['infoWindow']['openByClick'];
 		$this->extConf['closeByClick'] = $this->settings['infoWindow']['closeByClick'];
